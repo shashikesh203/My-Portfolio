@@ -22,9 +22,16 @@ const NavBar = () => {
   ];
   return (
     <>
-      <div className=" bg-green-400">
-        <div className="py-1 px-3 m-0">
-          <ul className="grid grid-cols-4 justify-between text-black text-center font-medium ">
+      {/* <div className=" bg-green-400">
+        <div className="text-[#ffffff] m-0 "> */}
+
+        <div
+        className="bg-green-400  backdrop-filter 
+        backdrop-blur-md sticky top-0 
+        "
+      >
+        
+           <ul className="grid grid-cols-4 justify-between  text-center font-medium ">
             {allRoutesDeatails.map((data, index) => {
               return (
                 <NavLink
@@ -32,8 +39,8 @@ const NavBar = () => {
                   to={data.path}
                   className={({ isActive }) =>
                     isActive
-                      ? ` border-b-4 rounded-b-sm  py-2 `
-                      : `border-b-4 border-gray-100 hover:bg-gray-200 py-2  `
+                      ? `   bg-[#474645] py-2 `
+                      : ` hover:bg-[#9c9a98] py-2  `
                   }
                 >
                   {data.routeName}
@@ -42,7 +49,10 @@ const NavBar = () => {
             })}
           </ul>
         </div>
-      </div>
+      
+
+
+       
     </>
   );
 };
